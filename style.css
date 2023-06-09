@@ -6,3 +6,114 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+body{
+    line-height: 1.6;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+
+form{ /* Genel form kısmı için stil */
+    display: flex; /* Flex yapı kullanarak yatay ve dikey düzlemde bir dinamiklik */
+    justify-content: center; /* Ortalamak */
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+#search-input{ /* Arama input için stil */
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+#search-button{ /* Arama butonu stil */
+    padding: 10px 20px;
+    background-color: #138065; 
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;  
+}
+
+.search-results{
+    display: flex; /* flex-container oluşturduk */
+    justify-content: space-between; /* en sol ve en sağa doğru yaydık */
+    flex-wrap: wrap; /* elemanlar bir satıra sığmazsa diğer satıra geçer */
+    max-width: 1200px; /* Ekranın maksimum genişliği */
+    margin: 0 auto;
+}
+
+.search-result{ /* Tek tek resimler üzerinden stillendirme */
+    margin-bottom: 60px;
+    width: 30%; /* Yüzde 30 genişlik*/
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Belirtilen boyutlardan taşmayı engellemek için*/
+}
+
+.search-result img{
+    width: 100%; /* seçilen eleman içindeki resmin 100% kaplamasını belirtir*/
+    height: 100%; /* seçilen eleman içindeki resmin 100% kaplamasını belirtir*/
+    object-fit: cover;  /* resim öğesinni orantsıını koruyarak tam sığmasını sağlar*/
+    transition: opacity 0.2s ease-in-out; /* Efekt ekledik*/
+}
+
+.search-result:hover img{
+    opacity: 0.8;
+}
+
+.search-result a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize; /* Tüm harfleri büyüttü*/
+}
+
+#show-more-button{
+    display: block;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #008cba;
+    padding: 10px 20px;
+    margin: 30px auto;
+    cursor: pointer;
+    text-align: center;
+    display: none; /* Duruma göre değişecek bir yapıda */
+}
+
+
+/*  Responsive  */
+@media screen and (max-width: 768px) {
+    .search-results{
+        padding: 20px;
+    }
+
+    .search-result{
+        width: 45%;
+    }  
+}
+
+@media screen and (max-width: 480px) {
+    .search-result{
+        width: 100%;
+    }  
+}

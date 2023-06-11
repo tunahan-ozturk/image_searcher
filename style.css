@@ -49,6 +49,12 @@ form{ /* Genel form kısmı için stil */
     margin-left: 10px;  
 }
 
+#search-button:hover{
+    background: orange;
+    color: #fff;
+    transition: 0.2s ease-in-out;
+}
+
 .search-results{
     display: flex; /* flex-container oluşturduk */
     justify-content: space-between; /* en sol ve en sağa doğru yaydık */
@@ -68,7 +74,7 @@ form{ /* Genel form kısmı için stil */
 
 .search-result img{
     width: 100%; /* seçilen eleman içindeki resmin 100% kaplamasını belirtir*/
-    height: 100%; /* seçilen eleman içindeki resmin 100% kaplamasını belirtir*/
+    height: 200px; /* seçilen eleman içindeki resmin 100% kaplamasını belirtir*/
     object-fit: cover;  /* resim öğesinni orantsıını koruyarak tam sığmasını sağlar*/
     transition: opacity 0.2s ease-in-out; /* Efekt ekledik*/
 }

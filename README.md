@@ -1,2 +1,2 @@
 # image_searcher
- You can find whatever you want with this app.
+ Bu web tabanlı uygulama sayesinde aratılan kelimenin görsel karşılıklarına ulaşılabilir.
